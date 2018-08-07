@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <script src="angular1.7.2.js"></script>
+<script>
+   ( function () {
+            var app = angular.module("demoapp", []);     
+            app.controller("democontroller", function ($scope, $http) {
+                var response = function (response) { $scope.data = response.data; }
+                $http.get('JsonFile1.json').then(response);
+                console.log(response);
+            });
+    })();
+    </script> 
+</head>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<body>
+ <div ng-app="demoapp">
+        <div ng-controller="democontroller">
+<div class="container-fluid" style="padding:0">
+        <div class="jumbotron" style="background-color:#14366E;color:white;padding-top:20px;padding-bottom:20px;margin-bottom:5px">
+          <h1>Retail Banking</h1>      
+        </div>
+  <div ng-app="demoapp" class="container-fluid" style="padding:0">
+		<div ng-controller="democontroller" >
+			<table class="table table-striped" style="font-size:75%;position:relative">
+				<tr >
+					<th>Transaction Id</th>
+					<th>Date</th>
+					<th>Type</th>
+					<th>Amount</th>
+				</tr>
+				<tr ng-repeat="item in data">
+					<td>{{item.transaction_id}}</td>
+					<td>{{item.transaction_date}}</td>
+					<td>{{item.transaction_type}}</td>
+					<td>{{item.transaction_amount}}</td>
+					
+				</tr>
+			</table>
+		</div>
+	</div>
+	 </div>
+    </div>
+</body>
+
+</html>
