@@ -1,0 +1,26 @@
+[
+    {
+        "transaction_id": 2010304051,
+        "transaction_date": "2018-07-12",
+        "transaction_amount": 3000,
+        "transaction_type": "C"
+    },
+    {
+        "transaction_id": 2010304052,
+        "transaction_date": "2018-07-13",
+        "transaction_amount": 4000,
+        "transaction_type": "D"
+    },
+    {
+        "transaction_id": 2010304053,
+        "transaction_date": "2018-07-13",
+        "transaction_amount": 5000,
+        "transaction_type": "D"
+    },
+    {
+        "transaction_id": 2010304054,
+        "transaction_date": "2018-07-14",
+        "transaction_amount": 6000,
+        "transaction_type": "C"
+    }
+]
