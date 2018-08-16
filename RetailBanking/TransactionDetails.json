@@ -1,0 +1,128 @@
+[
+    {
+        "transaction_id": 3500012,
+        "transaction_date": "2018-07-10",
+        "account_id": 52000140032,
+        "transaction_amount": 546,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500054,
+        "transaction_date": "2018-07-28",
+        "account_id": 52000140032,
+        "transaction_amount": 150,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500050,
+        "transaction_date": "2018-07-25",
+        "account_id": 52000140112,
+        "transaction_amount": 50000,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500036,
+        "transaction_date": "2018-07-16",
+        "account_id": 52000140112,
+        "transaction_amount": 4500,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500057,
+        "transaction_date": "2018-07-29",
+        "account_id": 52000140112,
+        "transaction_amount": 25000,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500018,
+        "transaction_date": "2018-07-11",
+        "account_id": 52000140112,
+        "transaction_amount": 10000,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500032,
+        "transaction_date": "2018-07-16",
+        "account_id": 52000140129,
+        "transaction_amount": 15600,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500040,
+        "transaction_date": "2018-07-18",
+        "account_id": 52000140129,
+        "transaction_amount": 4000,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500020,
+        "transaction_date": "2018-07-12",
+        "account_id": 52000140129,
+        "transaction_amount": 28000,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500030,
+        "transaction_date": "2018-07-16",
+        "account_id": 52000140129,
+        "transaction_amount": 3000,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500016,
+        "transaction_date": "2018-07-11",
+        "account_id": 52000140302,
+        "transaction_amount": 3000,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500056,
+        "transaction_date": "2018-07-28",
+        "account_id": 52000140302,
+        "transaction_amount": 3000,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500027,
+        "transaction_date": "2018-07-15",
+        "account_id": 52000140302,
+        "transaction_amount": 2000,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500043,
+        "transaction_date": "2018-07-19",
+        "account_id": 52000140025,
+        "transaction_amount": 1000,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500044,
+        "transaction_date": "2018-07-20",
+        "account_id": 52000140025,
+        "transaction_amount": 7500,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500015,
+        "transaction_date": "2018-07-10",
+        "account_id": 52000140025,
+        "transaction_amount": 2000,
+        "transaction_type": "CREDIT"
+    },
+    {
+        "transaction_id": 3500025,
+        "transaction_date": "2018-07-14",
+        "account_id": 52000140025,
+        "transaction_amount": 5500,
+        "transaction_type": "DEBIT"
+    },
+    {
+        "transaction_id": 3500028,
+        "transaction_date": "2018-07-15",
+        "account_id": 52000140025,
+        "transaction_amount": 600,
+        "transaction_type": "DEBIT"
+    }
+]

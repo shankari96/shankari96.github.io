@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="angular1.7.2.js"></script>
+    <link href="css/default.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script>
+        (function () {
+            var app = angular.module("demoapp", []);
+            app.controller("democontroller", function ($scope, $http) {
+                var responseCallback = function (response) {
+                    $scope.data = response.data;
+                    $scope.details = response.data;
+                     var datac = [];
+                     var labelc = [];
+                     var vcredit=0;
+                     var vdebit=0;
+                     for (var i = 0; i < $scope.details.length; i++) {
+                         if($scope.details[i].account_id==52000140129)
+                         {
+                         if($scope.details[i].transaction_type == "CREDIT")
+                         vcredit =vcredit+$scope.details[i].transaction_amount;
+                         else
+                         vdebit =vdebit+$scope.details[i].transaction_amount;
+                         }
+                     }
+                     datac.push(vcredit);
+                     datac.push(vdebit);
+                     f1( datac);
+                }
+                $http.get('TransactionDetails.json').then(responseCallback);
+                console.log($scope.details);
+
+            });
+        })();
+    </script>
+</head>
+
+<body>
+    <div ng-app="demoapp" class="container-fluid" style="padding:0">
+        <div ng-controller="democontroller">
+
+            
+            <div style="border:1px solid #6a96e9;margin-top: 5px; height: 130px;background-color: #6a96e9">
+                    <p style="text-align:left; margin-left: 10px;margin-top: 30px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 50px;color: #ffffff ">
+                       ACCOUNT ID :
+                            <span style="float:right; margin-right: 10px;">52000140129
+                                </span>
+
+                        </p>
+                    </div>
+                            
+            <div style="border:1px solid #6a96e9;margin-top: 5px; height: 80px;background-color: #6a96e9">
+                <p style="text-align:left; margin-left: 10px;margin-top: 10px;font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 40px;color: #ffffff ">
+                    NET BALANCE :
+                    <span style="float:right; margin-right: 10px;">
+                        <!--Retrieve balance here-->
+                    </span>
+
+                </p>
+            </div>
+
+
+<br>
+
+            <table style="margin-top: 0px">
+                
+
+                <tr>
+                    <td style="width: 77%;">
+                        <h1 style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;font-size: 30px">Transactions</h1>
+                        <table class="table table-striped" style="font-size:75%;position:relative;margin-top: 5px">
+                            <tr >
+                                <th>Transaction Id</th>
+                                <th>Date</th>
+                                <th>Type</th>
+                                <th>Amount</th>
+                            </tr>
+                            <tr ng-repeat="item in data" ng-if="item.account_id==52000140129">         
+                                <td>{{item.transaction_id}}</td>
+                                <td>{{item.transaction_date}}</td>
+                                <td>{{item.transaction_type}}</td>
+                                <td>{{item.transaction_amount}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td>
+                        <div class="chart-container">
+                            <br>
+                            <br>
+                            <div class="pie-chart-container">
+                                <canvas id="pie-chartcanvas-1"></canvas>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+
+
+
+        </div>
+    </div>
+     <script>function f1(datac) {
+
+            var ctx1 = $("#pie-chartcanvas-1");
+
+            var data1 = {
+                labels: ["Credit","Debit"],
+                datasets: [
+                    {
+                        label: "NETVAL",
+                        data: datac,
+                        backgroundColor: [
+                        "#c0c0c0","#6a96e9"
+                            
+                        ],
+
+                        borderWidth: [1, 1]
+                    }
+                ]
+            };
+
+
+            var options = {
+                title: {
+                    display: true,
+                    position: "top",
+                    text: "CREDIT vs DEBIT",
+                    fontSize: 18,
+                    fontColor: "#111"
+                },
+                legend: {
+                    display: true,
+                    position: "bottom"
+                }
+            };
+
+
+            var chart1 = new Chart(ctx1, {
+                type: "doughnut",
+                data: data1,
+                options: options
+            });
+
+
+        };
+    </script> 
+</body>
+
+</html>
